@@ -1,0 +1,31 @@
+<div class="my-4">
+    <div class="container text-center">
+      <div class="row my-3">
+        <div class="col-6">
+            <a class="btn btn-outline-info w-100" href="/showProfesor-Seccion/?id=<%=idEstructura%>"> Ver Profesores Sin Seccion Asignada</a>
+        </div>
+        <div class="col-6">
+            <a class="btn btn-outline-primary w-100" href="#"> Ver Secciones Sin Profesor Asignado</a>
+        </div>
+      </div>
+
+      <table class="table white-text">
+        <tr>
+          <th>Nombres</th>
+          <th>Apellidos</th>
+          <th>Cedula</th>
+          <th>Materia</th>
+          <th>Codigo</th>
+        </tr>
+        <% profesores.forEach( function(profesor){ %>
+          <tr>
+              <td><%= profesor.Nombres %></td>
+              <td><%= profesor.Apellidos %></td>
+              <td><%= profesor.Cedula %></td>
+              <td><%= profesor.Materia %></td>
+              <td><%= profesor.Codigo %></td>
+            </tr>
+        <% }) %>
+      </table>
+    </div>
+  </div>

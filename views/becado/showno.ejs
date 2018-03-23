@@ -1,0 +1,24 @@
+<div class="my-4">
+    <div class="container text-center white-text">
+    <div class="container text-center">
+    <h1 class="my-4">Estudiantes No Becados:</h1>
+      <table class="table white-text">
+        <tr>
+          <th>Nombre</th>
+          <th>Apellido</th>
+          <th>Carnet</th>
+
+        <th colspan="2"><a href="/addBecado" class="btn btn-outline-success">Agregar</a></th>
+        </tr>
+        <% becados.forEach( function(becado){ %>
+          <tr>
+              <td><%= becado.Nombres %></td>
+              <td><%= becado.Apellidos %></td>
+              <td><%= becado.carnet %></td>
+      
+
+            </tr>
+        <% }) %>
+      </table>
+    </div>
+  </div>

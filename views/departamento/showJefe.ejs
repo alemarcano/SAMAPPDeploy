@@ -1,0 +1,15 @@
+<div class="d-flex align-items-center justify-content-center w-100 h-100">
+  <div class="container text-center white-text my-auto align-middle">
+      <h3 class="p-3 mb-2">Por favor, seleccione el departamento que usted es jefe: </h3>
+
+      <div class="row">
+      <% departamentos.forEach( function(departamento){ %>
+        <div class="col-4">
+          <a class="btn btn-outline-warning w-100" href="/menu/?id=<%=departamento.idEstructura%>"> <%= departamento.nombre %> </a>
+        </div>
+      <% }) %>
+      </div>
+    </div>
+</div>
+
+

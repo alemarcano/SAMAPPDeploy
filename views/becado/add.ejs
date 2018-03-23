@@ -1,0 +1,40 @@
+<div class="d-flex align-items-center justify-content-center w-100 h-100">
+        <div class="text-center white-text my-auto align-middle">
+            <div>
+              <h3 class="p-3 mb-2"> Agregar un Becado:</h3>
+    
+              <form action="/addBecado" method="POST">
+                <table class="table">
+                  <tr>
+                    <th>Tipo de Beca:</th>
+                    <td><input class="form-control"  type="radio" name="tipo" value="Acedemica" required>Academica</td>
+                    <td><input class="form-control"  type="radio" name="tipo" value="Deportiva" required>Deportiva</td>
+                    <td><input class="form-control"  type="radio" name="tipo" value="Deportiva" required>Artistica</td>
+                    <td><input class="form-control"  type="radio" name="tipo" value="Matricula de Honor" required>Matricula de Honor</td>
+                    <td><input class="form-control"  type="radio" name="tipo" value="Desempeno" required>Desempeno</td>
+                  </tr>
+                  <tr>
+                        <th>Porcentaje de Beca:</th>
+                        <td><input class="form-control"  type="radio" name="condicion" value="100" required>100</td>
+                        <td><input class="form-control"  type="radio" name="condicion" value="75" required>75</td>
+                        <td><input class="form-control"  type="radio" name="condicion" value="50" required>50</td>
+                        <td><input class="form-control"  type="radio" name="condicion" value="25" required>25</td>
+                      </tr>
+                      <tr>
+                    <th>Persona:</th>
+                    <td>
+                      <select name="persona" class="form-control">
+                        <% personas.forEach(function(persona){ %>
+                          <option value="<%= persona.idPersona %>" > <%= persona.Nombres + ' ' + persona.Apellidos %> </option>
+                        <% }) %>
+                      </select>
+                    </td>
+                
+                    <td  colspan="6"> <input class="btn btn-success w-50" type="submit" value="Submit"> </td>
+                  </tr>
+                </table>
+              </div>
+            </form>
+          </div>
+      </div>
+    

@@ -1,0 +1,26 @@
+<div class="my-4">
+  <div class="container text-center white-text">
+    <h1 class="my-4">Departamentos:</h1>
+    <table class="table white-text">
+      <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>ID Jefe</th>
+        <th colspan="2"><a href="#" class="btn btn-outline-success">Agregar</a></th>
+      </tr>
+      <% departamentos.forEach( function(departamento){ %>
+        <tr>
+            <td><%= departamento.idEstructura %></td>
+            <td><%= departamento.nombre %></td>
+            <% if(departamento.jefe){ %>
+              <td> <%= departamento.jefe.idProfesor %> </td>
+            <% } else { %>
+              <td> NULL </td>
+            <% } %>
+            <td> <a class="btn btn-primary btn-sm" href="<%= 'profesor/edit/'+departamento.idEstructura %>">Editar</a> </td>
+            <td> <a class="btn btn-danger btn-sm" href="<%= 'profesor/delete/'+departamento.idEstructura %>">Eliminar</a> </td>
+          </tr>
+      <% }) %>
+    </table>
+  </div>
+</div>

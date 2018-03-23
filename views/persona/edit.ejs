@@ -1,0 +1,45 @@
+<div class="d-flex align-items-center justify-content-center w-100 h-100">
+    <div class="text-center white-text my-auto align-middle">
+        <div>
+          <h3 class="p-3 mb-2"> Editar una Persona</h3>
+
+          <form action="<%= '/editPersona/?id='+persona.idPersona %>" method="POST">
+            <table class="table">
+              <tr>
+                <th>Cedula:</th>
+                <td colspan="2"><input class="form-control"  type="integer" name="cedula" value="<%= persona.cedula %>" required></td>
+                <th>Nombres</th>
+                <td colspan="2"><input class="form-control"  type="text" name="nombres"  value="<%= persona.nombres %>"required></td>
+              </tr>
+              <tr>
+                <th>Apellidos</th>
+                <td colspan="2"><input class="form-control"  type="text" name="apellidos" value="<%= persona.apellidos %>" required></td>
+                <th>Sexo</th>
+                <td><input class="form-control"  type="radio" name="sexo" value="Masculino" <% if(persona.sexo.toLowerCase() == 'masculino'){ %> checked <% } %> required> Masculino</td>
+                <td><input class="form-control"  type="radio" name="sexo" value="Femenino" <% if(persona.sexo.toLowerCase() == 'femenino'){ %> checked <% } %> required> Femenino</td>
+              </tr>
+              <tr>
+                <th>Numero de Apartamento</th>
+                <td colspan="2"><input class="form-control"  type="text" name="nroAp" <% if(persona.nroAp != null){ %> value="<%= persona.nroAp %>" <% } %>"></td>
+                <th>Calle</th>
+                <td colspan="2"><input class="form-control"  type="text" name="calle" <% if(persona.calle != null){ %> value="<%= persona.calle %>" <% } %>"></td>
+              </tr>
+              <tr>
+                <th>Urbanizacion</th>
+                <td colspan="2"><input class="form-control"  type="text" name="urbanizacion" <% if(persona.urbanizacion != null){ %> value="<%= persona.urbanizacion %>" <% } %> ></td>
+                <th>Municipio</th>
+                <td colspan="2"><input class="form-control"  type="text" name="municipio" <% if(persona.municipio != null){ %> value="<%= persona.municipio %>" <% } %>></td>
+              </tr>
+              <tr>
+                <th colspan="2">Estado</th>
+                <td colspan="3"> <input class="form-control"  type="text" name="estado" value="<%= persona.estado %>" required> </td>
+              <td></td>
+              </tr>
+              <tr>
+                <td  colspan="6"> <input class="btn btn-success w-50" type="submit" value="Submit"> </td>
+              </tr>
+            </table>
+          </div>
+        </form>
+      </div>
+  </div>

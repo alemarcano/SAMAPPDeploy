@@ -1,0 +1,36 @@
+<div class="my-4">
+    <div class="container text-center white-text">
+      <h1 class="my-4">Personas:</h1>
+      <table class="table white-text">
+        <tr>
+          <th>ID</th>
+          <th>Cedula</th>
+          <th>Nombres</th>
+          <th>Apellidos</th>
+          <th>Sexo</th>
+          <th>NroAp</th>
+          <th>Calle</th>
+          <th>Urbanizacion</th>
+          <th>Municipio</th>
+          <th>Estado</th>
+          <th colspan="2"><a href="/addPersona" class="btn btn-outline-success">Agregar</a></th>
+        </tr>
+        <% personas.forEach( function(persona){ %>
+          <tr>
+              <td><%= persona.idPersona %></td>
+              <td><%= persona.cedula %></td>
+              <td><%= persona.nombres %></td>
+              <td><%= persona.apellidos %></td>
+              <td><%= persona.sexo %></td>
+              <td><%= persona.nroAp %></td>
+              <td><%= persona.calle %></td>
+              <td><%= persona.urbanizacion %></td>
+              <td><%= persona.municipio %></td>
+              <td><%= persona.estado %></td>
+              <td> <a class="btn btn-primary btn-sm" href="<%= '/editPersona/?id='+persona.idPersona %>">Editar</a> </td>
+              <td> <a class="btn btn-danger btn-sm" href="<%= '/deletePersona/?id='+persona.idPersona %>">Eliminar</a> </td>
+            </tr>
+        <% }) %>
+      </table>
+    </div>
+  </div>

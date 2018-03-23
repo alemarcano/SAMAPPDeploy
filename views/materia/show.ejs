@@ -1,0 +1,24 @@
+<div class="my-4">
+  <div class="container text-center white-text">
+    <h1 class="my-4">Materias:</h1>
+    <table class="table white-text">
+      <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Codigo</th>
+        <th>Departamento</th>
+        <th colspan="2"><a href="/addMateria" class="btn btn-outline-success">Agregar</a></th>
+      </tr>
+      <% materias.forEach( function(materia){ %>
+        <tr>
+            <td><%= materia.idMateria %></td>
+            <td><%= materia.nombre %></td>
+            <td><%= materia.codigo %></td>
+            <td><%= materia.departamento.nombre %></td>
+            <td> <a class="btn btn-primary btn-sm" href="<%= 'materia/edit/?id='+materia.idMateria %>">Editar</a> </td>
+            <td> <a class="btn btn-danger btn-sm" href="<%= 'materia/delete/?id='+materia.idMateria %>">Eliminar</a> </td>
+          </tr>
+      <% }) %>
+    </table>
+  </div>
+</div>

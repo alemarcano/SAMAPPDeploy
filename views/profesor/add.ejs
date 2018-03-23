@@ -1,0 +1,39 @@
+<div class="d-flex align-items-center justify-content-center w-100 h-100">
+    <div class="text-center white-text my-auto align-middle">
+        <div>
+          <h3 class="p-3 mb-2"> Agregar un Profesor:</h3>
+
+          <form action="/addProfesor" method="POST">
+            <table class="table">
+              <tr>
+                <th>Especialidad:</th>
+                <td><input class="form-control"  type="text" name="especialidad" required></td>
+              </tr>
+              <tr>
+                <th>Persona:</th>
+                <td>
+                  <select name="persona" class="form-control">
+                    <% personas.forEach(function(persona){ %>
+                      <option value="<%= persona.idPersona %>" > <%= persona.Nombres + ' ' + persona.Apellidos %> </option>
+                    <% }) %>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <th>Departamento</th>
+                <td>
+                  <select name="isEstructura" class="form-control">
+                      <% departamentos.forEach(function(departamento){ %>
+                        <option value="<%= departamento.idEstructura %>" > <%= departamento.nombre %> </option>
+                      <% }) %>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td  colspan="6"> <input class="btn btn-success w-50" type="submit" value="Submit"> </td>
+              </tr>
+            </table>
+          </div>
+        </form>
+      </div>
+  </div>

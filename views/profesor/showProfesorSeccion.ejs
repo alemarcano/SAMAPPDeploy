@@ -1,0 +1,24 @@
+<div class="my-4">
+    <div class="container text-center">
+      <table class="table white-text">
+        <tr>
+          <th>Nombres</th>
+          <th>Apellidos</th>
+          <th>Cedula</th>
+          <th>Seccion</th>
+        </tr>
+        <% profesores.forEach( function(profesor){ %>
+          <tr>
+              <td><%= profesor.Nombres %></td>
+              <td><%= profesor.Apellidos %></td>
+              <td><%= profesor.Cedula %></td>
+              <td> - </td>
+            </tr>
+        <% }); %>
+
+        <% if(profesores.length < 1){ %>
+          <h3 class="my-5 white-text">Todos los profesores del departamento tienen una Seccion :)</h3>
+        <% }; %>
+      </table>
+    </div>
+  </div>

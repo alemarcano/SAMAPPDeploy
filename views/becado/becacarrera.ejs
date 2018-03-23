@@ -1,0 +1,22 @@
+<div class="my-4">
+        <div class="container text-center white-text">
+        <div class="container text-center">
+        <h1 class="my-4">Becados por Carrera: </h1>
+          <table class="table white-text">
+            <tr>
+              <th>Nombre</th>
+              <th>Cantidad</th>
+     
+    
+            </tr>
+            <% becados.forEach( function(becado){ %>
+              <tr>
+                  <td><%= becado.Nombre %></td>
+                  <td><%= becado.Contador %></td>
+
+    
+                </tr>
+            <% }) %>
+          </table>
+        </div>
+      </div>

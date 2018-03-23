@@ -1,0 +1,45 @@
+<div class="d-flex align-items-center justify-content-center w-100 h-100">
+    <div class="text-center white-text my-auto align-middle">
+        <div>
+          <h3 class="p-3 mb-2"> Agregar una Persona:</h3>
+
+          <form action="/addPersona" method="POST">
+            <table class="table">
+              <tr>
+                <th>Cedula:</th>
+                <td colspan="2"><input class="form-control"  type="integer" name="cedula" required></td>
+                <th>Nombres</th>
+                <td colspan="2"><input class="form-control"  type="text" name="nombres" required></td>
+              </tr>
+              <tr>
+                <th>Apellidos</th>
+                <td colspan="2"><input class="form-control"  type="text" name="apellidos" required></td>
+                <th>Sexo</th>
+                <td><input class="form-control"  type="radio" name="sexo" value="Masculino" required>Masculino</td>
+                <td><input class="form-control"  type="radio" name="sexo" value="Femenino" required>Femenino</td>
+              </tr>
+              <tr>
+                <th>Numero de Apartamento</th>
+                <td colspan="2"><input class="form-control"  type="text" name="nroAp"></td>
+                <th>Calle</th>
+                <td colspan="2"><input class="form-control"  type="text" name="calle"></td>
+              </tr>
+              <tr>
+                <th>Urbanizacion</th>
+                <td colspan="2"><input class="form-control"  type="text" name="urbanizacion"></td>
+                <th>Municipio</th>
+                <td colspan="2"><input class="form-control"  type="text" name="municipio"></td>
+              </tr>
+              <tr>
+                <th colspan="2">Estado</th>
+                <td colspan="3"> <input class="form-control"  type="text" name="estado" required> </td>
+              <td></td>
+              </tr>
+              <tr>
+                <td  colspan="6"> <input class="btn btn-success w-50" type="submit" value="Submit"> </td>
+              </tr>
+            </table>
+          </div>
+        </form>
+      </div>
+  </div>

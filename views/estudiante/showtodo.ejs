@@ -1,0 +1,41 @@
+<div class="my-4">
+    <div class="container text-center white-text">
+            <h1 class="my-4">Estudiantes Inscritos por Seccion:</h1>
+    <div class="container text-center">
+      <div class="row my-3">
+        <div class="col-6">
+            <a class="btn btn-outline-info w-100" href="/unacarrera"> Ver Numero de Becados por Carrera</a>
+        </div>
+        <div class="col-6">
+            <a class="btn btn-outline-primary w-100" href="/unamateria"> Ver Numero de Becados por Materia</a>
+        </div>
+      </div>
+      <table class="table white-text">
+        <tr>
+          <th>Seccion</th>
+          <th>Materia</th>
+          <th>Profesor</th>
+          <th>Dia</th>
+          <th>Inicio</th>
+          <th>Final</th>
+          <th>Duracion</th>
+          <th>Inscritos</th>
+
+        </tr>
+        <% estudiantes.forEach( function(estudiante){ %>
+          <tr>
+              <td><%= estudiante.numSecc %></td>
+              <td><%= estudiante.Materia %></td>
+              <td><%= estudiante.Profesor %></td>
+              <td><%= estudiante.Dia %></td>
+              <td><%= estudiante.HoraInicial %></td>
+              <td><%= estudiante.HoraFinal %></td>
+              <td><%= estudiante.duracion %></td>
+              <td><%= estudiante.Inscritos %></td>
+
+
+            </tr>
+        <% }) %>
+      </table>
+    </div>
+  </div>

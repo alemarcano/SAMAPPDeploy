@@ -1,0 +1,23 @@
+<div class="my-4">
+        <div class="container text-center white-text">
+    <div class="container text-center">
+      <table class="table white-text">
+    <h1 class="my-4">Estudiantes por Cada Tipo de Beca:</h1>
+        <tr>
+          <th>Numero de Becados</th>
+          <th>Tipo de Beca</th>
+
+
+        </tr>
+        <% becados.forEach( function(becado){ %>
+          <tr>
+              <td><%= becado.Becaditos %></td>
+              <td><%= becado.tipo %></td>
+
+
+
+            </tr>
+        <% }) %>
+      </table>
+    </div>
+  </div>

@@ -1,0 +1,30 @@
+<div class="my-4">
+    <div class="container text-center white-text">
+      <h1 class="my-4">Profesores:</h1>
+      <table class="table white-text">
+        <tr>
+          <th>ID</th>
+          <th>Cedula</th>
+          <th>Nombres</th>
+          <th>Apellidos</th>
+          <th>Sexo</th>
+          <th>Departamento</th>
+          <th>Especialidad</th>
+          <th colspan="2"><a href="/addProfesor" class="btn btn-outline-success">Agregar</a></th>
+        </tr>
+        <% profesores.forEach( function(profesor){ %>
+          <tr>
+              <td><%= profesor.idProfesor %></td>
+              <td><%= profesor.persona.cedula %></td>
+              <td><%= profesor.persona.nombres %></td>
+              <td><%= profesor.persona.apellidos %></td>
+              <td><%= profesor.persona.sexo %></td>
+              <td><%= profesor.isEstructura.nombre %></td>
+              <td><%= profesor.especialidad %></td>
+              <td> <a class="btn btn-primary btn-sm" href="<%= 'profesor/edit/?id='+profesor.idProfesor %>">Editar</a> </td>
+              <td> <a class="btn btn-danger btn-sm" href="<%= 'profesor/delete/?id='+profesor.idProfesor %>">Eliminar</a> </td>
+            </tr>
+        <% }) %>
+      </table>
+    </div>
+  </div>

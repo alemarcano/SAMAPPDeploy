@@ -1,0 +1,30 @@
+<div class="my-4">
+    <div class="container text-center white-text">
+    <div class="container text-center">
+     <h1 class="my-4">Estudiantes:</h1>
+      <table class="table white-text">
+        <tr>
+          <th>ID</th>
+          <th>Cedula</th>
+          <th>Nombres</th>
+          <th>Apellidos</th>
+          <th>Sexo</th>
+          <th>Carnet</th>
+
+          <th colspan="2"><a href="/addEstudiante" class="btn btn-outline-success">Agregar</a></th>
+        </tr>
+        <% estudiantes.forEach( function(estudiante){ %>
+          <tr>
+              <td><%= estudiante.idEstudiante %></td>
+              <td><%= estudiante.persona.cedula %></td>
+              <td><%= estudiante.persona.nombres %></td>
+              <td><%= estudiante.persona.apellidos %></td>
+              <td><%= estudiante.persona.sexo %></td>
+              <td><%= estudiante.carnet %></td>
+              <td> <a class="btn btn-primary btn-sm" href="<%= 'estudiante/edit/?id='+estudiante.idEstudiante %>">Editar</a> </td>
+              <td> <a class="btn btn-danger btn-sm" href="<%= 'estudiante/delete/?id='+estudiante.idEstudiante %>">Eliminar</a> </td>
+            </tr>
+        <% }) %>
+      </table>
+    </div>
+  </div>

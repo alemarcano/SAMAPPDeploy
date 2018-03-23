@@ -1,0 +1,24 @@
+<div class="my-4">
+        <div class="container text-center white-text">
+        <div class="container text-center">
+        <h1 class="my-4">Promedio de los Becados en el trimestre:</h1>
+          <table class="table white-text">
+            <tr>
+              <th>Nombres</th>
+              <th>Apellidos</th>
+              <th>Nota</th>
+      
+    
+            </tr>
+            <% becados.forEach( function(becado){ %>
+              <tr>
+                  <td><%= becado.Nombres %></td>
+                  <td><%= becado.Apellidos %></td>
+                  <td><%= becado.Nota %></td>
+
+    
+                </tr>
+            <% }) %>
+          </table>
+        </div>
+      </div>

@@ -1,0 +1,33 @@
+<div class="d-flex align-items-center justify-content-center w-100 h-100">
+    <div class="text-center white-text my-auto align-middle">
+        <div>
+          <h3 class="p-3 mb-2"> Editar una Materia:</h3>
+
+          <form action="<%= '/editMateria/?id='+ materia.idMateria %>" method="POST">
+            <table class="table">
+              <tr>
+                <th>Nombre:</th>
+                <td><input class="form-control"  type="text" name="nombre" value=" <%= materia.nombre %> " required></td>
+              </tr>
+              <tr>
+                <th>Codigo:</th>
+                <td><input class="form-control"  type="text" name="codigo" value=" <%= materia.codigo %> " required></td>
+              </tr>
+              <tr>
+                <th>Departamento</th>
+                <td>
+                  <select name="departamento" class="form-control">
+                      <% departamentos.forEach(function(departamento){ %>
+                        <option value="<%= departamento.idEstructura %>" <% if(departamento.idEstructura == materia.departamento){ %> selected <% } %> > <%= departamento.nombre %> </option>
+                      <% }) %>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td  colspan="6"> <input class="btn btn-success w-50" type="submit" value="Submit"> </td>
+              </tr>
+            </table>
+          </div>
+        </form>
+      </div>
+  </div>
